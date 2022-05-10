@@ -8,4 +8,6 @@
     <string name="restriction3V1">El campo contraseña no puede estar vacío </string>
     <string name="restriction4V1"> El campo nombre no puede contener números o caracteres extraños </string>
     <string name="sending"> Enviando... </string>
+    <string name="welcome"> !Bienvenido! </string>
+    <string name="bootcamp"> Al Bootcamp Android 2022 </string>
 </resources>

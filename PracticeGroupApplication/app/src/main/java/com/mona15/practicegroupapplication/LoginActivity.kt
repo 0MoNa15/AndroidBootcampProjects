@@ -1,5 +1,6 @@
 package com.mona15.practicegroupapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -58,11 +59,15 @@ class LoginActivity : AppCompatActivity() {
         val name: String = findViewById<EditText>(R.id.editTextName).text.toString()
         val password: String = findViewById<EditText>(R.id.editTextPassword).text.toString()
         val validationOutput = dataValidation(name, password)
+        val nextActivity = Intent(this,HomeActivity::class.java)
+        val bundle = Bundle()
+        bundle.putString("name",name)
+        nextActivity.putExtras(bundle)
         when (validationOutput) {
             1 -> Toast.makeText(this, R.string.restriction1V1, Toast.LENGTH_SHORT).show()
             2 -> Toast.makeText(this, R.string.restriction2V1, Toast.LENGTH_SHORT).show()
             3 -> Toast.makeText(this, R.string.restriction3V1, Toast.LENGTH_SHORT).show()
-            4 -> Toast.makeText(this, R.string.sending, Toast.LENGTH_SHORT).show()
+            4 -> startActivity(nextActivity)
         }
     }
 }
