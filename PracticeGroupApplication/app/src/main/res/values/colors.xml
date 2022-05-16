@@ -13,4 +13,5 @@
     <color name="dark_gray">#7C7C7C</color>
     <color name="light_gray">#989797</color>
     <color name="soft_gray">#D5D3D3</color>
+    <color name="bt_background_gray">#A09F9F</color>
 </resources>

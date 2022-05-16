@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,32 +12,34 @@
         android:id="@+id/tvLoginUser"
         android:text="@string/txt_user"
         style="@style/login_userdata"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintVertical_bias="0.23000002"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23000002" />
+        />
 
     <TextView
         android:id="@+id/tvLoginPassword"
         android:text="@string/txt_password"
         style="@style/login_userdata"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintVertical_bias="0.39"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+ />
 
     <TextView
         android:id="@+id/tvLoginJoinWith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="@dimen/margin_top_joinwith"
         android:text="@string/txt_join_with"
         android:textColor="@color/dark_gray"
-        android:textSize="20sp"
+        android:textSize="@dimen/tv_login_text_size"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +64,7 @@
     <EditText
         android:id="@+id/etUser"
         style="@style/login_edit_text"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="@dimen/ev_margin_end"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -80,7 +83,6 @@
         app:layout_constraintVertical_bias="0.13999999" />
 
     <Button
-
         android:id="@+id/btnLogin"
         android:text="@string/btn_login"
         style="@style/login_button"
@@ -95,10 +97,10 @@
         android:id="@+id/tvLoginHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginStart="@dimen/margin_start_haveaccount"
+        android:layout_marginBottom="@dimen/margin_bottom_haveaccount"
         android:text="@string/txt_have_account"
-        android:textSize="18dp"
+        android:textSize="@dimen/tv_userdata"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvSignup"
@@ -109,11 +111,11 @@
         android:id="@+id/tvLoginGuest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="@dimen/margin_bottom_guest"
         android:fontFamily="sans-serif-black"
         android:text="@string/txt_guest"
-        android:textColor="#0B0909"
-        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_login_text_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,9 +126,9 @@
         android:id="@+id/tvSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
+        android:layout_marginEnd="@dimen/margin_end_signup"
         android:text="@string/txt_signup"
-        android:textSize="18dp"
+        android:textSize="@dimen/tv_userdata"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -135,8 +137,8 @@
 
     <ImageView
         android:id="@+id/ivTitle"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/width_null"
+        android:layout_height="@dimen/iv_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -157,7 +159,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civApple"
         style="@style/login_circle_images"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="@dimen/margin_civ_to_parent"
         android:src="@drawable/apple_logo"
         app:layout_constraintEnd_toStartOf="@+id/civFacebook"
         app:layout_constraintHorizontal_bias="0.5"
@@ -167,7 +169,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civGoogle"
         android:src="@drawable/google_logo"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="@dimen/margin_civ_to_parent"
         style="@style/login_circle_images"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
