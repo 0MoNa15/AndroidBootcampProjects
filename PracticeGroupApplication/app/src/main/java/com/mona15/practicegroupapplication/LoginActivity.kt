@@ -17,9 +17,9 @@ class LoginActivity : AppCompatActivity() {
     private var txtPassword: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+       super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        /*
         etName = findViewById(R.id.editTextName)
         etPassword = findViewById(R.id.editTextPassword)
         txtName = findViewById(R.id.tvName)
@@ -68,6 +68,6 @@ class LoginActivity : AppCompatActivity() {
             2 -> Toast.makeText(this, R.string.restriction2V1, Toast.LENGTH_SHORT).show()
             3 -> Toast.makeText(this, R.string.restriction3V1, Toast.LENGTH_SHORT).show()
             4 -> startActivity(nextActivity)
-        }
+        }*/
     }
 }

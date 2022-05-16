@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">PracticeGroupApplication</string>
-    <string name="txt_name"> Nombre: </string>
-    <string name="password"> Contraseña: </string>
-    <string name="button_main"> BOTÓN </string>
+    <string name="txt_title"> IMDb</string>
+    <string name="txt_user"> Usuario </string>
+    <string name="txt_password"> Contraseña </string>
+    <string name="txt_forgot_pwd"> ¿Olvidaste la contraseña? </string>
+    <string name="txt_join_with"> O podes ingresar con</string>
+    <string name="txt_have_account">¿No tienes cuenta? </string>
+    <string name="txt_signup"> Regístrate </string>
+    <string name="txt_guest"> Continuar como invitado </string>
+    <string name="btn_login"> Login </string>
     <string name="restriction1V1"> Los campos nombre y contraseña no pueden estar vacíos </string>
     <string name="restriction2V1"> El campo nombre no puede estar vacío </string>
     <string name="restriction3V1">El campo contraseña no puede estar vacío </string>

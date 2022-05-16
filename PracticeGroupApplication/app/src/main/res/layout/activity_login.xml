@@ -4,96 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f3c518"
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="126dp"
-        android:layout_height="23dp"
-        android:text="@string/txt_name"
-        android:textSize="20sp"
+        android:id="@+id/tvLoginUser"
+        android:text="@string/txt_user"
+        style="@style/login_userdata"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.294" />
+        app:layout_constraintVertical_bias="0.23000002" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvLoginPassword"
+        android:text="@string/txt_password"
+        style="@style/login_userdata"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <TextView
+        android:id="@+id/tvLoginJoinWith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/password"
+        android:layout_marginTop="36dp"
+        android:text="@string/txt_join_with"
+        android:textColor="@color/dark_gray"
         android:textSize="20sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvLoginForgotPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_forgot_pwd"
+        android:textColor="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="322dp"
-        android:layout_height="50dp"
-        android:digits=" ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:id="@+id/etUser"
+        style="@style/login_edit_text"
+        android:layout_marginEnd="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvLoginUser"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="322dp"
-        android:layout_height="52dp"
-        android:ems="10"
-        android:inputType="textPassword"
+        android:id="@+id/etPassword"
+        style="@style/login_edit_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522" />
+        app:layout_constraintEnd_toEndOf="@+id/etUser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etUser"
+        app:layout_constraintTop_toBottomOf="@+id/etUser"
+        app:layout_constraintVertical_bias="0.13999999" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="316dp"
-        android:layout_height="49dp"
-        android:text="@string/button_main"
-        android:onClick="submitData"
+
+        android:id="@+id/btnLogin"
+        android:text="@string/btn_login"
+        style="@style/login_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.151" />
 
     <TextView
-        android:id="@+id/tvName"
-        android:layout_width="224dp"
-        android:layout_height="28dp"
-        android:textSize="18sp"
+        android:id="@+id/tvLoginHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="76dp"
+        android:text="@string/txt_have_account"
+        android:textSize="18dp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.294" />
+        app:layout_constraintEnd_toStartOf="@+id/tvSignup"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvPassword"
-        android:layout_width="200dp"
-        android:layout_height="27dp"
-        android:textSize="18sp"
+        android:id="@+id/tvLoginGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/txt_guest"
+        android:textColor="#0B0909"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:text="@string/txt_signup"
+        android:textSize="18dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLoginHaveAccount"
+        app:layout_constraintTop_toTopOf="@+id/tvLoginHaveAccount" />
+
+    <ImageView
+        android:id="@+id/ivTitle"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintVertical_bias="0.122"
+        app:srcCompat="@drawable/imdb_logo" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civFacebook"
+        android:src="@drawable/facebook_logo"
+        style="@style/login_circle_images"
+        app:layout_constraintEnd_toStartOf="@+id/civGoogle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/civApple"
+        app:layout_constraintTop_toTopOf="@+id/civGoogle" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civApple"
+        style="@style/login_circle_images"
+        android:layout_marginStart="64dp"
+        android:src="@drawable/apple_logo"
+        app:layout_constraintEnd_toStartOf="@+id/civFacebook"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/civFacebook" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civGoogle"
+        android:src="@drawable/google_logo"
+        android:layout_marginEnd="64dp"
+        style="@style/login_circle_images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/civFacebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
