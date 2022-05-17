@@ -7,8 +7,12 @@
         <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/drawable/shape_box_gray.xml" value="0.126" />
         <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/drawable/shape_box_white.xml" value="0.2555" />
         <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/drawable/splash_screen.xml" value="0.16" />
+        <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout-h600dp/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout-large/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout-small/activity_login.xml" value="1.6" />
+        <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout-sw320dp/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout/activity_main.xml" value="0.2033514492753623" />
         <entry key="..\:/Users/Alejandro/Documents/AndroidStudioProjects/AndroidBootcampProjects/PracticeGroupApplication/app/src/main/res/layout/activity_unknown.xml" value="0.25" />
       </map>

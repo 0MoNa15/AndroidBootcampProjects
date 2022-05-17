@@ -10,7 +10,7 @@
     </style>
 
     <style name="login_button">
-        <item name="android:layout_width"> @dimen/width_null</item>
+        <item name="android:layout_width"> @dimen/zero_dp</item>
         <item name="android:layout_height">@dimen/ev_height</item>
         <item name="android:textColor">@color/soft_gray</item>
         <item name="android:textStyle">bold</item>
@@ -20,10 +20,11 @@
     </style>
 
     <style name="login_edit_text">
-        <item name="android:layout_width"> @dimen/width_null </item>
+        <item name="android:layout_width"> @dimen/zero_dp </item>
         <item name="android:layout_height"> @dimen/ev_height </item>
         <item name="android:background">@drawable/shape_box_white</item>
         <item name="android:paddingLeft">@dimen/ev_padding_left</item>
+        <item name="android:textSize">@dimen/tv_userdata</item>
     </style>
 
     <style name="login_circle_images">
