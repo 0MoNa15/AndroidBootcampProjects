@@ -21,5 +21,28 @@
     <dimen name="iv_height">80dp</dimen>
     <dimen name="margin_civ_to_parent">64dp</dimen>
 
+    <!-- Constraint percentages -->
+
+    <dimen name="zero_pct">0</dimen>
+    <dimen name="five_pct">0.05</dimen>
+    <dimen name="ten_pct">0.1</dimen>
+    <dimen name="fifteen_pct">0.15</dimen>
+    <dimen name="twenty_pct">0.2</dimen>
+    <dimen name="twenty_five_pct">0.25</dimen>
+    <dimen name="thirty_pct">0.3</dimen>
+    <dimen name="thirty_five_pct">0.35</dimen>
+    <dimen name="forty_pct">0.4</dimen>
+    <dimen name="forty_five_pct">0.45</dimen>
+    <dimen name="fifty_pct">0.5</dimen>
+    <dimen name="fifty_five_pct">0.55</dimen>
+    <dimen name="sixty_pct">0.6</dimen>
+    <dimen name="sixty_five_pct">0.65</dimen>
+    <dimen name="seventy_pct">0.7</dimen>
+    <dimen name="seventy_five_pct">0.75</dimen>
+    <dimen name="eighty_pct">0.8</dimen>
+    <dimen name="eight_five_pct">0.85</dimen>
+    <dimen name="ninety_pct">0.9</dimen>
+    <dimen name="ninety_five_pct">0.95</dimen>
+    <dimen name="hundert_pct">1</dimen>
 
 </resources>

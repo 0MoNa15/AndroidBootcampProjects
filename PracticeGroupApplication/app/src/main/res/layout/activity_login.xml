@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f3c518"
+    android:background="@color/gold_yellow"
     tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/tvLoginUser"
         android:text="@string/txt_user"
         style="@style/login_userdata"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintVertical_bias="0.23000002"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

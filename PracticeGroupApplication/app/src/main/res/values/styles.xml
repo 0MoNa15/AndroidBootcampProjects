@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="login_style">
+    
+    <style name="login_userdata">
         <item name="android:layout_width"> wrap_content </item>
         <item name="android:layout_height"> wrap_content </item>
-        <item name="layout_constraintTop_toTopOf">parent</item>
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
-        <item name="layout_constraintEnd_toEndOf"></item>
-    </style>
-
-    <style name="login_userdata" parent="login_style">
         <item name="android:textColor">@color/dark_gray</item>
         <item name="android:textSize">@dimen/tv_userdata</item>
         <item name="android:textStyle">bold</item>
