@@ -17,7 +17,9 @@ class LoginActivity : AppCompatActivity() {
     private var txtPassword: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-       super.onCreate(savedInstanceState)
+        Thread.sleep(2000)
+        setTheme(R.style.Theme_PracticeGroupApplication)
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         /*
         etName = findViewById(R.id.editTextName)
