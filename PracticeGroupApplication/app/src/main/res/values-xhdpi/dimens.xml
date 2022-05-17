@@ -2,7 +2,7 @@
 <resources>
     <dimen name="tv_userdata">18sp</dimen>
     <dimen name="zero_dp">0dp</dimen>
-    <dimen name="ev_height">30dp</dimen>
+    <dimen name="ev_height">40dp</dimen>
     <dimen name="bt_text">18sp</dimen>
     <dimen name="ev_padding_left">10dp</dimen>
     <dimen name="civ_width">65dp</dimen>
@@ -17,4 +17,5 @@
     <dimen name="margin_bottom_24">24dp</dimen>
     <dimen name="margin_bottom_32">32dp</dimen>
     <dimen name="margin_bottom_144">144dp</dimen>
+
 </resources>

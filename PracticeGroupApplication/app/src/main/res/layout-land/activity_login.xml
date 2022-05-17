@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,81 +13,80 @@
         android:layout_marginBottom="@dimen/margin_bottom_10"
         android:text="@string/txt_user"
         app:layout_constraintBottom_toTopOf="@+id/etUser"
-        app:layout_constraintStart_toStartOf="@+id/guideline1" />
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <TextView
         android:id="@+id/tvLoginPassword"
         style="@style/login_userdata"
-        android:layout_marginBottom="@dimen/margin_bottom_10"
+        android:layout_marginBottom="@dimen/margin_bottom_8"
         android:text="@string/txt_password"
         app:layout_constraintBottom_toTopOf="@id/etPassword"
-        app:layout_constraintStart_toStartOf="@id/guideline1" />
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <TextView
         android:id="@+id/tvLoginJoinWith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_bottom_24"
+        android:layout_marginBottom="@dimen/margin_bottom_40"
         android:text="@string/txt_join_with"
         android:textColor="@color/dark_gray"
         android:textSize="@dimen/tv_login_text_size"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@id/civFacebook"
-        app:layout_constraintEnd_toEndOf="@id/guideline3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/guideline2" />
+        app:layout_constraintBottom_toTopOf="@+id/civApple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline1" />
 
     <TextView
         android:id="@+id/tvLoginForgotPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_bottom_24"
+        android:layout_marginBottom="@dimen/margin_bottom_10"
         android:gravity="center"
         android:text="@string/txt_forgot_pwd"
         android:textColor="@color/light_gray"
-        app:layout_constraintBottom_toTopOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="@id/guideline1" />
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <EditText
         android:id="@+id/etUser"
         style="@style/login_edit_text"
-        android:layout_marginBottom="@dimen/margin_bottom_24"
-        app:layout_constraintBottom_toTopOf="@id/tvLoginPassword"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline1" />
+        android:layout_marginBottom="@dimen/margin_bottom_16"
+        app:layout_constraintBottom_toTopOf="@+id/tvLoginPassword"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <EditText
         android:id="@+id/etPassword"
         style="@style/login_edit_text"
         android:layout_marginBottom="@dimen/margin_bottom_10"
-        app:layout_constraintBottom_toTopOf="@id/tvLoginForgotPwd"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintBottom_toTopOf="@+id/tvLoginForgotPwd"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/guideline1" />
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <Button
         android:id="@+id/btnLogin"
         style="@style/login_button"
         android:layout_marginBottom="@dimen/margin_bottom_24"
         android:text="@string/btn_login"
-        app:layout_constraintBottom_toTopOf="@id/tvLoginJoinWith"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/guideline1" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <TextView
         android:id="@+id/tvLoginHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_bottom_24"
+        android:layout_marginBottom="@dimen/margin_bottom_48"
         android:text="@string/txt_have_account"
         android:textSize="@dimen/tv_userdata"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/tvLoginGuest"
-        app:layout_constraintEnd_toStartOf="@+id/tvSignup"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/guideline2" />
+        app:layout_constraintStart_toEndOf="@+id/tvSignup" />
 
     <TextView
         android:id="@+id/tvSignup"
@@ -98,9 +96,9 @@
         android:textSize="@dimen/tv_userdata"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/tvLoginGuest"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/tvLoginHaveAccount"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvLoginHaveAccount"
+        app:layout_constraintStart_toEndOf="@+id/etPassword"
         app:layout_constraintTop_toTopOf="@+id/tvLoginHaveAccount"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -115,81 +113,66 @@
         android:textSize="@dimen/tv_login_text_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/guideline3"
-        app:layout_constraintHorizontal_bias="0.635"
-        app:layout_constraintStart_toStartOf="@id/guideline2" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        tools:layout_editor_absoluteX="464dp" />
+
 
     <ImageView
         android:id="@+id/ivTitle"
         android:layout_width="@dimen/zero_dp"
         android:layout_height="@dimen/zero_dp"
-        android:layout_marginBottom="@dimen/margin_bottom_24"
-        app:layout_constraintBottom_toTopOf="@id/tvLoginUser"
+        app:layout_constraintBottom_toTopOf="@+id/tvLoginUser"
         app:layout_constraintDimensionRatio="3:1"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guideline1"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.784"
         app:srcCompat="@drawable/imdb_logo" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civFacebook"
         style="@style/login_circle_images"
-        android:layout_marginBottom="@dimen/margin_bottom_120"
         android:src="@drawable/facebook_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/civGoogle"
+        app:layout_constraintBottom_toTopOf="@+id/tvLoginHaveAccount"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/civApple" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civApple"
         style="@style/login_circle_images"
-        android:layout_marginBottom="@dimen/margin_bottom_120"
         android:src="@drawable/apple_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvLoginHaveAccount"
         app:layout_constraintEnd_toStartOf="@+id/civFacebook"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/guideline2" />
+        app:layout_constraintStart_toEndOf="@+id/civGoogle"
+        app:layout_constraintTop_toTopOf="@+id/civFacebook" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civGoogle"
         style="@style/login_circle_images"
-        android:layout_marginBottom="@dimen/margin_bottom_120"
         android:src="@drawable/google_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintBottom_toTopOf="@+id/tvLoginHaveAccount"
+        app:layout_constraintEnd_toStartOf="@+id/civApple"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/civFacebook" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintStart_toEndOf="@+id/etUser"
+        app:layout_constraintTop_toTopOf="@+id/civApple" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.2" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.05" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

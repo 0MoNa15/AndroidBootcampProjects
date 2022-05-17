@@ -10,8 +10,7 @@
     <TextView
         android:id="@+id/tvLoginUser"
         style="@style/login_userdata"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/margin_bottom_16"
         android:text="@string/txt_user"
         app:layout_constraintBottom_toTopOf="@+id/etUser"
         app:layout_constraintStart_toStartOf="@+id/guideline1" />
@@ -19,8 +18,7 @@
     <TextView
         android:id="@+id/tvLoginPassword"
         style="@style/login_userdata"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="@dimen/margin_bottom_10"
         android:text="@string/txt_password"
         app:layout_constraintBottom_toTopOf="@id/etPassword"
         app:layout_constraintStart_toStartOf="@id/guideline1" />
@@ -29,7 +27,7 @@
         android:id="@+id/tvLoginJoinWith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="@dimen/margin_bottom_32"
         android:text="@string/txt_join_with"
         android:textColor="@color/dark_gray"
         android:textSize="@dimen/tv_login_text_size"
@@ -43,8 +41,7 @@
         android:id="@+id/tvLoginForgotPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="@dimen/margin_bottom_32"
         android:gravity="center"
         android:text="@string/txt_forgot_pwd"
         android:textColor="@color/light_gray"
@@ -55,7 +52,7 @@
     <EditText
         android:id="@+id/etUser"
         style="@style/login_edit_text"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="@dimen/margin_bottom_32"
         app:layout_constraintBottom_toTopOf="@id/tvLoginPassword"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -64,7 +61,7 @@
     <EditText
         android:id="@+id/etPassword"
         style="@style/login_edit_text"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/margin_bottom_10"
         app:layout_constraintBottom_toTopOf="@id/tvLoginForgotPwd"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,7 +70,7 @@
     <Button
         android:id="@+id/btnLogin"
         style="@style/login_button"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="@dimen/margin_bottom_24"
         android:text="@string/btn_login"
         app:layout_constraintBottom_toTopOf="@id/tvLoginJoinWith"
         app:layout_constraintEnd_toEndOf="@id/guideline4"
@@ -84,7 +81,7 @@
         android:id="@+id/tvLoginHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="@dimen/margin_bottom_24"
         android:text="@string/txt_have_account"
         android:textSize="@dimen/tv_userdata"
         android:textStyle="italic"
@@ -97,7 +94,7 @@
         android:id="@+id/tvLoginGuest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="@dimen/margin_bottom_32"
         android:fontFamily="sans-serif-black"
         android:text="@string/txt_guest"
         android:textColor="@color/black"

@@ -12,11 +12,17 @@
     <dimen name="et_corner_radius">16dp</dimen>
     <dimen name="bt_corner_radius">16dp</dimen>
     <dimen name="tv_login_text_size">20sp</dimen>
+    <dimen name="margin_bottom_8">8dp</dimen>
     <dimen name="margin_bottom_10">10dp</dimen>
     <dimen name="margin_bottom_16">16dp</dimen>
     <dimen name="margin_bottom_24">24dp</dimen>
     <dimen name="margin_bottom_32">32dp</dimen>
+    <dimen name="margin_bottom_40">40dp</dimen>
+    <dimen name="margin_bottom_48">48dp</dimen>
+    <dimen name="margin_bottom_80">80dp</dimen>
+    <dimen name="margin_bottom_120">120dp</dimen>
     <dimen name="margin_bottom_144">144dp</dimen>
+
 
     <!-- Constraint percentages -->
 
