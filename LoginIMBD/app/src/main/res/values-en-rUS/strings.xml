@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Login</string>
+    <string name="usuario">User name</string>
+    <string name="Contraseña">Password</string>
+    <string name="olvidocontraseña">Lost password?</string>
+    <string name="ingresacon">Sign in with</string>
+    <string name="notienescuenta">"Do you have an account? "</string>
+    <string name="registrate">Sign up</string>
+    <string name="continuarcomoinvitado">Continue as a guest</string>
+    <string name="btnlogin">Login</string>
+</resources>

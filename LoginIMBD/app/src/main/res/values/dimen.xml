@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!---Textbox-->
+    <dimen name="editextlayoutwidth">274dp</dimen>
+    <dimen name="layout_height">46dp</dimen>
+    <dimen name="layout_marginTop_usuariotextbox">52dp</dimen>
+    <dimen name="layout_marginTop_passwordtextbox">44dp</dimen>
+    <dimen name="emstextboc">10</dimen>
+
+    <!---Button-->
+    <dimen name="Buttonlayout_width">275dp</dimen>
+    <dimen name="Buttonlayout_height">61dp</dimen>
+    <dimen name="Buttonlayout_marginTop">132dp</dimen>
+
+    <!---image view imdb-->
+    <dimen name="imagelayout_width">209dp</dimen>
+    <dimen name="imagelayout_height">78dp</dimen>
+    <dimen name="imagelayout_marginStart">32dp</dimen>
+    <dimen name="imagelayout_marginTop">24dp</dimen>
+    <dimen name="imagelayout_marginEnd">32dp</dimen>
+
+    <!---Text view txtusuario-->
+    <dimen name="textusuriolayout_marginTop">16dp</dimen>
+    <dimen name="textlayout_constraintHorizontal_bias">0.137</dimen>
+    <!---Text view password-->
+    <dimen name="textpasswordlayout_marginTop">12dp</dimen>
+    <dimen name="textpasswordlayout_constraintHorizontal_bias">0.147</dimen>
+    <!---Text view textSugerenciaLogin-->
+    <dimen name="sugerencialoginlayout_constraintHorizontal_bias">0.147</dimen>
+    <dimen name="textviewlayout_marginStart">72dp</dimen>
+    <dimen name="textviewlayout_marginTop">16dp</dimen>
+    <dimen name="textviewlayout_marginEnd">68dp</dimen>
+    <dimen name="textviewguesslayout_marginTop">56dp</dimen>
+    <dimen name="textviewguesslayout_constraintHorizontal_bias">0.528</dimen>
+    <dimen name="textolvidocontraseñalayout_marginTop">20dp</dimen>
+    <dimen name="textolvidocontraseñalayout_constraintHorizontal_bias">0.199</dimen>
+
+    <!---image view opciones login-->
+    <dimen name="imageviewlogolayout_width">63dp</dimen>
+    <dimen name="imageviewlogolayout_height">69dp</dimen>
+    <dimen name="imageviewlogolayout_marginStart">68dp</dimen>
+    <dimen name="imageviewlogolayout_marginTop">40dp</dimen>
+    <dimen name="imageviewlogolayout_constraintHorizontal_bias">0.511</dimen>
+    <dimen name="imageviewlogolayout_marginEnd">68dp</dimen>
+
+
+</resources>

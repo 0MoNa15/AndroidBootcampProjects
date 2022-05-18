@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="usuario">Usuario</string>
+    <string name="Contraseña">Contraseña</string>
+    <string name="olvidocontraseña">¿Olvidaste la contraseña?</string>
+    <string name="ingresacon">Ó podes ingresar con</string>
+    <string name="notienescuenta">¿No tienes cuenta?</string>
+    <string name="registrate">Regístrate</string>
+    <string name="continuarcomoinvitado">Continuar como invitado</string>
+    <string name="btnlogin">Login</string>
+
+</resources>
