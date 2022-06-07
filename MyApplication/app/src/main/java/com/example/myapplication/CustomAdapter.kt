@@ -9,14 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
-    val titles = arrayOf("Queen's Gambit","Suit","Arrow","Motor Gear")
+    val titles = arrayOf("Queen's Gambit","Queen of flow","Arrow","MIB")
 
     val details = arrayOf("4.5","4.5","4.5","4.5")
 
     val images = intArrayOf(R.drawable.gambitqueenportada,
-        R.drawable.suit,
+        R.drawable.queen,
         R.drawable.arrow ,
-        R.drawable.carro)
+        R.drawable.mib)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.card_layout,viewGroup,false)
