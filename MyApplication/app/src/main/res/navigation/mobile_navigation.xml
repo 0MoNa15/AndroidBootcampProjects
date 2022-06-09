@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -22,22 +22,28 @@
         android:name="com.example.myapplication.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/panellogin"
-        android:label="@string/login"
-        tools:layout="@layout/login" >
-        <action
-            android:id="@+id/action_panellogin_to_panelsingup"
-            app:destination="@id/panelsingup" />
-    </fragment>
-    <fragment
-        android:id="@+id/panelsingup"
-        android:label="fragment_panelsingup"
-        tools:layout="@layout/singup" />
 
     <fragment
         android:id="@+id/buscarpel"
-        android:name="com.example.myapplication.buscarpel"
+        android:name="com.example.myapplication.ui.buscarpel"
         android:label="fragment_buscarpel"
         tools:layout="@layout/fragment_buscarpel" />
+    <fragment
+        android:id="@+id/singupFragment"
+        android:name="com.example.myapplication.SingupFragment"
+        android:label="fragment_singup"
+        tools:layout="@layout/fragment_singup" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_loginFragment_to_singupFragment"
+            app:destination="@id/singupFragment" />
+    </fragment>
 </navigation>

@@ -1,15 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.databinding.FragmentBuscarpelBinding
-import com.example.myapplication.databinding.FragmentDashboardBinding
-import com.example.myapplication.ui.dashboard.DashboardViewModel
+import com.example.myapplication.view.recyclebuscarcustomadapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

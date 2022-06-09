@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.view
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 
 class recyclebuscarcustomadapter: RecyclerView.Adapter<recyclebuscarcustomadapter.ViewHolder>() {
 
@@ -15,12 +16,14 @@ class recyclebuscarcustomadapter: RecyclerView.Adapter<recyclebuscarcustomadapte
 
     val actors = arrayOf("Stephen Amel","Jorge Enrique y Ana Orozco","Tamy Andrade y Charly Flow","Tom Cruise","Beto A Saber" , "Thor y Valkiria")
 
-    val images = intArrayOf(R.drawable.arrow,
+    val images = intArrayOf(
+        R.drawable.arrow,
         R.drawable.bety,
-        R.drawable.queen ,
+        R.drawable.queen,
         R.drawable.edge,
         R.drawable.fall,
-        R.drawable.mib)
+        R.drawable.mib
+    )
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.recyclebuscar,viewGroup,false)

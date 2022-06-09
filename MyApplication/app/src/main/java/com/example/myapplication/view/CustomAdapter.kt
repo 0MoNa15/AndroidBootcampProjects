@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.view
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 
 class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
@@ -13,10 +14,12 @@ class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     val details = arrayOf("4.5","4.5","4.5","4.5")
 
-    val images = intArrayOf(R.drawable.gambitqueenportada,
+    val images = intArrayOf(
+        R.drawable.gambitqueenportada,
         R.drawable.queen,
-        R.drawable.arrow ,
-        R.drawable.mib)
+        R.drawable.arrow,
+        R.drawable.mib
+    )
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.card_layout,viewGroup,false)

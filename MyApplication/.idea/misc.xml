@@ -8,7 +8,7 @@
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/shape.xml" value="0.2115" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/splash_background.xml" value="0.1" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_bottomnavigation.xml" value="0.25" />
-        <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/card_layout.xml" value="0.67" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_buscarpel.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
@@ -19,6 +19,7 @@
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_panellogin.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_panelsingup.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_play.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_singup.xml" value="0.33" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/insidepelis.xml" value="0.2457680250783699" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/lista_perfil.xml" value="0.33" />
         <entry key="..\:/Users/ESTEBAN OSORIO/AndroidStudioProjects/MyApplication/app/src/main/res/layout/login.xml" value="0.25" />

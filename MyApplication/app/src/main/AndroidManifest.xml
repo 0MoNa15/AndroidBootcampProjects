@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,16 +16,16 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="false"
             android:label="@string/main" />
         <activity
-            android:name=".bottomnavigation"
+            android:name=".view.bottomnavigation"
             android:exported="false"
             android:label="@string/title_activity_bottomnavigation" />
 
         <activity
-            android:name=".SLash"
+            android:name=".view.SLash"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>

@@ -1,26 +1,24 @@
 package com.example.myapplication.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.CustomAdapter
 import com.example.myapplication.R
+import com.example.myapplication.view.CustomAdapter
 import com.example.myapplication.databinding.FragmentHomeBinding
-import com.example.myapplication.listaperfilcustomadapter
-import com.example.myapplication.perfilcustomadapter
+import com.example.myapplication.view.bottomnavigation
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -44,6 +42,11 @@ class HomeFragment : Fragment() {
             layoutManager=LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL ,false)
             adapter= CustomAdapter()
         }
+
+        /// se pone visible el bottomnavigation
+        val view = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        view.visibility = View.VISIBLE
+        ///
 
     }
 

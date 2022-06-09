@@ -7,6 +7,7 @@
     <string name="title_notifications">Buscar</string>
     <string name="title_play">Play</string>
     <string name="login">Login</string>
+    <string name="characteres">La contraseña debe contener 8 caracteres</string>
 
     <string name="la_mejor_seleccion">Las mejores selecciones</string>
     <string name="titulomenu">The Queen Gambit</string>
