@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
-
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -16,7 +16,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".view.MainActivity"
+            android:name=".presentation.ui.login.MainActivity"
             android:exported="false"
             android:label="@string/main" />
         <activity
@@ -25,7 +25,7 @@
             android:label="@string/title_activity_bottomnavigation" />
 
         <activity
-            android:name=".view.SLash"
+            android:name=".presentation.ui.SLash"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
