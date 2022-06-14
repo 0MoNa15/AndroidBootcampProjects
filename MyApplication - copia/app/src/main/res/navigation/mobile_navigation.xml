@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myapplication.presentation.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.myapplication.presentation.ui.profile.ProfileFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.myapplication.presentation.ui.movie.detail.MovieDetailFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_moviedetail" />
+
+    <fragment
+        android:id="@+id/buscarpel"
+        android:name="com.example.myapplication.presentation.ui.movie.search.SearchMovieFragment"
+        android:label="fragment_buscarpel"
+        tools:layout="@layout/fragment_searchmovie" />
+    <fragment
+        android:id="@+id/singupFragment"
+        android:name="com.example.myapplication.presentation.ui.singup.SingupFragment"
+        android:label="fragment_singup"
+        tools:layout="@layout/fragment_singup" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication.presentation.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_loginFragment_to_singupFragment"
+            app:destination="@id/singupFragment" />
+    </fragment>
+</navigation>

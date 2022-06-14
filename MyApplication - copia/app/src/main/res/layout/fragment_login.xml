@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/naranjafondo">
+
+        <EditText
+            android:id="@+id/TextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textUsuario"
+            app:layout_constraintTop_toBottomOf="@+id/textUsuario" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/Buttonlayout_height"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/shape"
+            android:backgroundTint="@color/naranjafondo"
+            android:text="@string/btnlogin"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@+id/TextPassword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewolvido"
+            app:layout_constraintTop_toBottomOf="@+id/textViewolvido" />
+
+        <EditText
+            android:id="@+id/TextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/TextPersonName"
+            app:layout_constraintTop_toBottomOf="@+id/textPassword" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/imagelayout_width"
+            android:layout_height="@dimen/imagelayout_height"
+            android:layout_marginStart="@dimen/imagelayout_marginStart"
+            android:layout_marginTop="@dimen/imagelayout_marginTop"
+            android:layout_marginEnd="@dimen/imagelayout_marginEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/imdb_logo" />
+
+        <TextView
+            android:id="@+id/textUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/usuario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/Contraseña"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/TextPersonName"
+            app:layout_constraintTop_toBottomOf="@+id/TextPersonName" />
+
+        <TextView
+            android:id="@+id/textSugerenciaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/ingresacon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/imageviewlogolayout_width"
+            android:layout_height="@dimen/imageviewlogolayout_height"
+            android:layout_marginTop="@dimen/imageviewlogolayout_marginTop"
+            app:layout_constraintStart_toStartOf="@+id/textSugerenciaLogin"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:srcCompat="@drawable/logoapple" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/imageviewlogolayout_width"
+            android:layout_height="@dimen/imageviewlogolayout_height"
+            android:layout_marginTop="@dimen/imageviewlogolayout_marginTop"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="@dimen/imageviewlogolayout_constraintHorizontal_bias"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:srcCompat="@drawable/logoface" />
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/imageviewlogolayout_width"
+            android:layout_height="@dimen/imageviewlogolayout_height"
+            android:layout_marginTop="@dimen/imageviewlogolayout_marginTop"
+            app:layout_constraintEnd_toEndOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:srcCompat="@drawable/logogoogle" />
+
+        <TextView
+            android:id="@+id/textNotienescuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/notienescuenta"
+            app:layout_constraintEnd_toStartOf="@+id/textRegistrate"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textRegistrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/registrate"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/Textcontiuarinvitado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:gravity="center"
+            android:text="@string/continuarcomoinvitado"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textRegistrate"
+            app:layout_constraintHorizontal_bias="@dimen/textviewguesslayout_constraintHorizontal_bias"
+            app:layout_constraintStart_toStartOf="@+id/textNotienescuenta"
+            app:layout_constraintTop_toBottomOf="@+id/textNotienescuenta" />
+
+        <TextView
+            android:id="@+id/textViewolvido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/olvidocontraseña"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="@+id/TextPassword"
+            app:layout_constraintTop_toBottomOf="@+id/TextPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
