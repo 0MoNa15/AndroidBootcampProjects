@@ -45,7 +45,7 @@ class SearchMovieFragment : Fragment() {
 
         binding.recyclerViewbuscar.apply{
             layoutManager=LinearLayoutManager(activity,LinearLayoutManager.VERTICAL ,false)
-            adapter= recyclebuscarcustomadapter()
+            adapter= recyclebuscarcustomadapter(SearchmovieProvider.searchmovie)
         }
 
     }
