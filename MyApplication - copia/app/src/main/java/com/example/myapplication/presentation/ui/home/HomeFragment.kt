@@ -38,7 +38,8 @@ class HomeFragment : Fragment() {
 
         binding.recyclerView1.apply{
             layoutManager=LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL ,false)
-            adapter= CustomAdapter(HomeProvider.homemovieList)
+            //adapter= CustomAdapter(HomeProvider.homemovieList)
+            adapter= CustomAdapter()
         }
 
         /// se pone visible el bottomnavigation
