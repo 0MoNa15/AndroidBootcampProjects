@@ -1,17 +1,20 @@
 package com.example.myapplication.presentation.ui.login
 
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,10 +66,49 @@ class LoginFragment : Fragment() {
          val buttonvista: Button = binding.button
 
         buttonvista.setOnClickListener{
-            navController.navigate(R.id.navigation_home)
+
+            var user = binding.TextPersonName.text
+            var pass = binding.TextPassword.text
+
+
+            if(user.isNotEmpty() && pass.isNotEmpty()){
+                FirebaseAuth.getInstance().signInWithEmailAndPassword("${user}",
+                    "${pass}").addOnCompleteListener{
+                    if(it.isSuccessful){
+                        navController.navigate(R.id.navigation_home)
+                    }else{
+                        showAlert()
+                    }
+                }
+
+            }
+
+
+        }
+
+
+        val registro: TextView =binding.textRegistrate
+
+        registro.setOnClickListener{
+            navController.navigate(R.id.action_loginFragment_to_singupFragment)
         }
 
     }
+
+
+    private fun showAlert(){
+        var user = binding.TextPersonName.text
+        var pass = binding.TextPassword.text
+
+        val builder= AlertDialog.Builder(activity)
+        builder.setTitle("error")
+        builder.setMessage("It is not posible to sign in with user ${user} and ${pass}")
+        builder.setPositiveButton("accept",null)
+        val dialog: AlertDialog =builder.create()
+        dialog.show()
+    }
+
+
 
 
     override fun onDestroyView() {

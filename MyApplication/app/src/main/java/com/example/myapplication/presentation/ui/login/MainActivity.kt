@@ -20,8 +20,9 @@ import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityBottomnavigationBinding
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        this.supportActionBar?.hide()
 
         val navView: BottomNavigationView = binding.navView
 

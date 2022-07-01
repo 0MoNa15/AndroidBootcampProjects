@@ -13,13 +13,9 @@ import com.example.myapplication.presentation.ui.movie.search.adapter.SearchMovi
 
 class recyclebuscarcustomadapter (private val searchmovieList: List<SearchMovie>): RecyclerView.Adapter<SearchMovieViewHolder>() {
 
-
-
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): SearchMovieViewHolder {
         val LayoutInflater = LayoutInflater.from(viewGroup.context)
         return SearchMovieViewHolder(LayoutInflater.inflate(R.layout.recyclebuscar,viewGroup,false))
-
-
     }
 
     override fun onBindViewHolder(viewHolder: SearchMovieViewHolder, i: Int) {
