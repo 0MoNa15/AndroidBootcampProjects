@@ -1,5 +1,6 @@
 package com.example.myapplication.domain
 
+import com.example.myapplication.ExampleUnitTest
 import com.example.myapplication.data.movie.search.MovieListResponse
 import com.example.myapplication.domain.repository.MovieRepository
 import com.example.myapplication.presentation.ui.movie.search.SearchMovie
@@ -10,9 +11,9 @@ import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
+import org.junit.Assert.*
 
-
-class MoviesUseCaseTest{
+class MoviesUseCaseTest {
 
     @RelaxedMockK
     private lateinit var movierepository: MovieRepository
@@ -26,16 +27,23 @@ class MoviesUseCaseTest{
     }
 
     @Test
-fun receivingsomethingfromapi()= runBlocking {
-    //given
-        var myList = listOf(SearchMovie("Arrow",200,"Stephen Amel","x=es","hola","hi","hi","ji"))
+    fun receivingsomethingfromapi()= runBlocking {
 
-    coEvery { movierepository.repositorygetmovies().searchmoviesList } returns emptyList()
+        //Arrage
+       var parameter =1
+        var lalista = listOf<SearchMovie>(
+            SearchMovie("Arrow",1,"2008","Stephen Amel","https://static.wikia.nocookie.net/arrow/images/d/dc/Season_2_first_promo.png/revision/latest?cb=20141012195936&path-prefix=es","","",""),
+            SearchMovie("Yo soy Betty la fea",2,"1999","Jorge Enrique y Ana Orozco","https://www.okchicas.com/wp-content/uploads/2022/06/Yo-soy-Betty-la-fea-sale-de-Netflix-y-desato-epicos-memes.jpg","","",""),
+            SearchMovie("The queen of flow",3,"2020","Tamy Andrade y Charly Flow","https://pbs.twimg.com/media/DxIRyofU0AAGVwY.jpg","","",""),
+            )
+        var vote_averagexpected = 2
 
-        //When
-        MoviesUseCase(movierepository)
-        //then
-    coVerify { MoviesUseCase(movierepository) }
+        //Action
+        var result = ExampleUnitTest().repositorygetmovies(parameter)
+
+        //Assert
+       // assertEquals(  result.searchmoviesList[1].vote_average, vote_averagexpected )
+        assertEquals( result.searchmoviesList , lalista )
     }
 
 
