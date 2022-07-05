@@ -7,15 +7,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.josebootcampandroid.R
 import com.example.josebootcampandroid.data.home.ListMovieProfileModel
 import com.example.josebootcampandroid.databinding.ItemImagelasmejoresBinding
+import com.squareup.picasso.Picasso
 
 
 class ListMovieAdapter(val listMovie: List<ListMovieProfileModel>) : RecyclerView.Adapter<ListMovieAdapter.ListMovieViewHolders>() {
     inner class ListMovieViewHolders(view: View): RecyclerView.ViewHolder(view){
         private val binding = ItemImagelasmejoresBinding.bind(view)
         fun render(item: ListMovieProfileModel) {
-            binding.tvNameMovie.text = item.titlePrincipal
-            binding.tvPointMovie.text = item.moviePoint
-            binding.ivPrincipalImage.setImageResource(item.movieImage)
+            binding.tvNameMovie.text = item.title
+            binding.tvPointMovie.text = item.vote_average.toString()
+            Picasso.get().load("https://image.tmdb.org/t/p/w500${item.backdrop_path}").into(binding.ivPrincipalImage)
         }
 
     }

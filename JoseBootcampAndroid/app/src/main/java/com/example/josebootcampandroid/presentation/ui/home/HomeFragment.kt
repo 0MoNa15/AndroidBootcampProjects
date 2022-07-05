@@ -5,11 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.josebootcampandroid.data.home.ListMovieProvider
 import com.example.josebootcampandroid.data.home.MovieProfileProvider
 import com.example.josebootcampandroid.databinding.FragmentHomeBinding
+import com.example.josebootcampandroid.presentation.ui.movie.search.SearchAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -33,6 +38,11 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }*/
+
+        homeViewModel.fromApi()
+        homeViewModel.homeMovie.observe(viewLifecycleOwner, Observer {
+            binding.rvLasMejores.adapter = ListMovieAdapter(it)
+        })
         return root
     }
 
@@ -40,8 +50,6 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val imageMovieProfile = binding.rvimageMovieProfile
         imageMovieProfile.adapter = MovieProfileAdapater(MovieProfileProvider.listMovieProfile)
-        val imageListMovie = binding.rvLasMejores
-        imageListMovie.adapter = ListMovieAdapter(ListMovieProvider.listMovieProfile)
     }
 
     override fun onDestroyView() {
