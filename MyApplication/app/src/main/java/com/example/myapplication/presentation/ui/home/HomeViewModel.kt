@@ -21,17 +21,15 @@ class HomeViewModel @Inject constructor(private val homeMoviesUseCase: HomeMovie
     fun gethomemovies(){
         viewModelScope.launch {
             try {
-                //val response = ApiRestManager.create().getmovierated(ApiRestManager.apiKey)
-               // _homemovies.value = response.moviesList
                 val response =homeMoviesUseCase()
                 _homemovies.value = response.moviesList
             } catch (e: Exception){
 
              }
-
         }
     }
 
-
+//val response = ApiRestManager.create().getmovierated(ApiRestManager.apiKey)
+    // _homemovies.value = response.moviesList
 
 }

@@ -79,7 +79,6 @@ class SingupFragment : Fragment() {
                             showAlert()
                         }
                     }
-
             }
 
         }
@@ -109,7 +108,7 @@ class SingupFragment : Fragment() {
         }*/
         setup(view)
         val view = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
-        view.visibility = View.VISIBLE
+        view.visibility = View.GONE
     }
 
 

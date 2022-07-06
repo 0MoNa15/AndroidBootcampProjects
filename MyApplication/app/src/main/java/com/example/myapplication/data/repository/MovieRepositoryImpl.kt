@@ -9,12 +9,16 @@ import javax.inject.Inject
 class MovieRepositoryImpl @Inject constructor (private val api : RetrofitMovieDataSource) : MovieRepository {
 
 
-    override suspend fun repositorygetmovies(listId:Int): MovieListResponse {
+   /* override suspend fun repositorygetmovies(listId:Int): MovieListResponse {
         return api.getMovie(listId,ApiRestManager.apiKey)
-    }
+    }*/
 /*override suspend fun repositorygetmovies(listId:Int): MovieListResponse {
         return api.getMovie(listId,ApiRestManager.apiKey)
+    }*/
+
+    override suspend fun repositorygetmovies(): MovieListResponse {
+        return api.getMovie(1,ApiRestManager.apiKey)
     }
-* */
+
 
 }

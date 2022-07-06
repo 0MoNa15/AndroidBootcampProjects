@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="naranjafondo">#f5c518</color>
     <color name="fondofragment">#E0E0E0</color>
-
+    <color name="btngris">#808080</color>
 </resources>

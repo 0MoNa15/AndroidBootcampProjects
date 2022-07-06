@@ -28,7 +28,7 @@
             android:layout_height="@dimen/Buttonlayout_height"
             android:layout_marginTop="13dp"
             android:background="@drawable/shape"
-            android:backgroundTint="@color/naranjafondo"
+            android:backgroundTint="@color/btngris"
             android:text="@string/btnlogin"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="@+id/TextPassword"

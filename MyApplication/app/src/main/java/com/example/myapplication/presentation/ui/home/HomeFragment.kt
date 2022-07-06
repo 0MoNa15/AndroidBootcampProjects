@@ -46,16 +46,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-       /* binding.recyclerView1.apply{
-            layoutManager=LinearLayoutManager(activity,LinearLayoutManager.HORIZONTAL ,false)
-            adapter= CustomAdapter(HomeProvider.homemovieList)
-        }*/
-
-        /// se pone visible el bottomnavigation
+         /// se pone visible el bottomnavigation
         val view = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
         view.visibility = View.VISIBLE
-        ///
 
     }
 
