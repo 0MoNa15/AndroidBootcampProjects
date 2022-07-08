@@ -4,7 +4,7 @@ import com.example.josebootcampandroid.R
 import com.example.josebootcampandroid.data.movie.search.SearchModel
 
 class SearchProvider {
-    companion object{
+    /*companion object{
         val SearchOfMovie = listOf<SearchModel>(
             SearchModel("Transformer 1","2007","Shia LaBeouf - Megan Fox - Josh Duhamel", R.drawable.transformer1_movie),
             SearchModel("La venganza de los caídos","2009","(Frank Welker - John Turturro - Ramon Rodriguez",R.drawable.transformer2_movie),
@@ -14,5 +14,5 @@ class SearchProvider {
             SearchModel("Bumblebee","2018","Hailee Steinfeld - John Cena - Jorge Lendeborg Jr",R.drawable.transformer6_movie)
 
         )
-    }
+    }*/
 }

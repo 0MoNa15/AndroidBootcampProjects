@@ -1,60 +1,91 @@
 package com.example.josebootcampandroid.presentation.ui.register
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.josebootcampandroid.R
+import com.example.josebootcampandroid.databinding.FragmentHomeBinding
+import com.example.josebootcampandroid.databinding.FragmentLogBinding
+import com.example.josebootcampandroid.databinding.FragmentSingUpBinding
+import com.example.josebootcampandroid.presentation.ui.home.HomeFragment
+import com.example.josebootcampandroid.presentation.ui.home.ProviderType
+import com.example.josebootcampandroid.presentation.ui.login.LogFragment
+import com.google.firebase.auth.FirebaseAuth
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [fragment_sing_up.newInstance] factory method to
- * create an instance of this fragment.
- */
 class fragment_sing_up : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentSingUpBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sing_up, container, false)
+        _binding = FragmentSingUpBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment fragment_sing_up.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            fragment_sing_up().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    private fun setup() {
+        binding.buttonAceptar.setOnClickListener {
+            if (!binding.etEmail.text.isNullOrEmpty() && !binding.etPass.text.isNullOrEmpty()) {
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(
+                    binding.etEmail.text.toString(),
+                    binding.etPass.text.toString()
+                ).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        showCorrect()
+                        showLog()
+                    } else {
+                        showAlert()
+                    }
                 }
             }
+        }
+
     }
+
+    private fun showAlert() {
+        val builder = AlertDialog.Builder(this.context)//verificar si esto es correcto
+        builder.setTitle("Error")
+        builder.setMessage("Se ha producido un error registrando el usuario o contraseña")
+        builder.setPositiveButton("Aceptar",null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun showCorrect(){
+        val builder = AlertDialog.Builder(this.context)
+        builder.setTitle("Felicidades")
+        builder.setMessage("Usuario y contraseña registrados satisfactoriamente")
+        builder.setPositiveButton("Aceptar",null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun showLog(){
+        findNavController().navigate(R.id.navigation_login)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.buttonAceptar.setOnClickListener {
+            setup()
+        }
+    }
+
+
+
 }
+
