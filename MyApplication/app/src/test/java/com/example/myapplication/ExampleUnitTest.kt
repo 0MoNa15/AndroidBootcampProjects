@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import com.example.myapplication.data.movie.search.MovieListResponse
+import com.example.myapplication.domain.repository.Mock.MovieRepositoryMock
 import com.example.myapplication.domain.repository.MovieRepository
 import com.example.myapplication.presentation.ui.movie.search.SearchMovie
 import org.junit.Test
@@ -12,7 +13,7 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest : MovieRepository{
+class ExampleUnitTest : MovieRepositoryMock{
 
     override suspend fun repositorygetmovies(listId:Int): MovieListResponse {
 
@@ -29,8 +30,9 @@ class ExampleUnitTest : MovieRepository{
                 movielistresponse = MovieListResponse(lalista)
             }
             2->{
-                movielistresponse= MovieListResponse(listOf())
+                movielistresponse= MovieListResponse(emptyList())
             }
+
         }
         return movielistresponse
     }
