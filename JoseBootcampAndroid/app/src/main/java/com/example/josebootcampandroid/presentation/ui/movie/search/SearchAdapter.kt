@@ -8,16 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.josebootcampandroid.R
 import com.example.josebootcampandroid.data.movie.search.SearchModel
 import com.example.josebootcampandroid.databinding.ItemMovieBinding
+import com.example.josebootcampandroid.domain.models.Movie
+import com.example.josebootcampandroid.domain.models.MovieTop
 import com.squareup.picasso.Picasso
 
-class SearchAdapter(val SearchMovie: List<SearchModel>) : RecyclerView.Adapter<SearchAdapter.SearchMovieViewHolders>() {
+class SearchAdapter(val SearchMovie: List<Movie>) : RecyclerView.Adapter<SearchAdapter.SearchMovieViewHolders>() {
     inner class SearchMovieViewHolders(val view: View): RecyclerView.ViewHolder(view){
         private val binding = ItemMovieBinding.bind(view)
-        fun render(item: SearchModel) {
+        fun render(item: Movie) {
             binding.tvMovieTitle.text = item.title
-            binding.tvYear.text = item.release_date
+            binding.tvYear.text = item.date
             /*binding.tvStar.text = item.nameCastOfSearch*/
-            Picasso.get().load("https://image.tmdb.org/t/p/w500${item.backdrop_path}").into(binding.ivMovie)
+            Picasso.get().load("https://image.tmdb.org/t/p/w500${item.backgroundImage}").into(binding.ivMovie)
             view.setOnClickListener { view.findNavController().navigate(R.id.navigation_detail)}
         }
     }
