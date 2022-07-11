@@ -5,18 +5,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.josebootcampandroid.R
-import com.example.josebootcampandroid.data.home.ListMovieProfileModel
+import com.example.josebootcampandroid.domain.models.MovieTop
 import com.example.josebootcampandroid.databinding.ItemImagelasmejoresBinding
 import com.squareup.picasso.Picasso
 
 
-class ListMovieAdapter(val listMovie: List<ListMovieProfileModel>) : RecyclerView.Adapter<ListMovieAdapter.ListMovieViewHolders>() {
+class ListMovieAdapter(val listMovie: List<MovieTop>) : RecyclerView.Adapter<ListMovieAdapter.ListMovieViewHolders>() {
     inner class ListMovieViewHolders(view: View): RecyclerView.ViewHolder(view){
         private val binding = ItemImagelasmejoresBinding.bind(view)
-        fun render(item: ListMovieProfileModel) {
+        fun render(item: MovieTop) {
             binding.tvNameMovie.text = item.title
-            binding.tvPointMovie.text = item.vote_average.toString()
-            Picasso.get().load("https://image.tmdb.org/t/p/w500${item.backdrop_path}").into(binding.ivPrincipalImage)
+            binding.tvPointMovie.text = item.voteAverage.toString()
+            Picasso.get().load("https://image.tmdb.org/t/p/w500${item.backdropPath}").into(binding.ivPrincipalImage)
         }
 
     }

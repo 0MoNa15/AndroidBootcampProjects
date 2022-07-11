@@ -1,9 +1,8 @@
-package com.example.josebootcampandroid.di
+package com.example.josebootcampandroid.data.di
 
-import com.example.josebootcampandroid.data.repositories.MovieHomeRepositoryImpl
+import com.example.josebootcampandroid.data.datasource.dao.MovieDao
 import com.example.josebootcampandroid.data.repositories.MovieRepositoryImpl
 import com.example.josebootcampandroid.data.source.RetrofitMovieDataSource
-import com.example.josebootcampandroid.domain.repositories.MovieHomeRepository
 import com.example.josebootcampandroid.domain.repositories.MovieRepository
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -48,14 +47,8 @@ object ApiRestManager {
 
     @Provides
     @Singleton
-    fun providerObtainMovie(api:RetrofitMovieDataSource) : MovieRepository{
-        return MovieRepositoryImpl(api)
-    }
-
-    @Provides
-    @Singleton
-    fun providerObtainHomeMovie(api: RetrofitMovieDataSource) : MovieHomeRepository{
-        return MovieHomeRepositoryImpl(api)
+    fun providerObtainMovie(api:RetrofitMovieDataSource, movieDao:MovieDao) : MovieRepository{
+        return MovieRepositoryImpl(api,movieDao)
     }
 
 }
