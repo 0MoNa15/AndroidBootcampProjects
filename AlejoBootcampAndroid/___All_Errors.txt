@@ -1,6 +1,0 @@
-CorrelationId: b54c1b3e-cb7d-468e-a334-7165c19d9f7e
-UTC DateTime: 6/07/2022 8:19:03 p. m.
-
-The following files/folders have not been downloaded
-0. AlejoBootcampAndroid/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/JVd9ipT9tURs_idSjrwD9yqerOs=
-1. AlejoBootcampAndroid/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/KRrRWhZqrogubvs7EoRUgsNonzM=
