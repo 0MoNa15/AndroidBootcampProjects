@@ -9,12 +9,12 @@ import retrofit2.http.Query
 interface RetrofitMovieDataSource {
     @GET("list/{id}")
     suspend fun obtainMovie(
-        @Path("id")listId:Int?,
-        @Query("api_key")apiKey:String?
-    ):MovieListResponse
+        @Path("id") listId: Int?,
+        @Query("api_key") apiKey: String?
+    ): MovieListResponse
 
     @GET("movie/top_rated")
     suspend fun obtainMovieList(
         @Query("api_key") apiKey: String?
-    ):ListMovieResponse
+    ): ListMovieResponse
 }

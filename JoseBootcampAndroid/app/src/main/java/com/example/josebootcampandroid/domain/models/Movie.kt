@@ -3,7 +3,6 @@ package com.example.josebootcampandroid.domain.models
 import com.example.josebootcampandroid.data.datasource.entities.MovieEntity
 import com.example.josebootcampandroid.data.movie.models.MovieDto
 
-
 data class Movie(
     val title: String,
     val id: Int,
@@ -14,7 +13,7 @@ data class Movie(
     val averageVote: Double
 )
 
-fun MovieDto.toDomain () = Movie (
+fun MovieDto.toDomain() = Movie(
     title,
     id,
     backgroundImage,

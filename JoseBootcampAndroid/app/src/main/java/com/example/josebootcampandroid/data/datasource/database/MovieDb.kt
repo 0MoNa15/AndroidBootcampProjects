@@ -8,5 +8,5 @@ import com.example.josebootcampandroid.data.datasource.entities.MovieTopEntity
 
 @Database(entities = [MovieEntity::class, MovieTopEntity::class], version = 1)
 abstract class MovieDb : RoomDatabase() {
-    abstract fun movieDao() : MovieDao
+    abstract fun movieDao(): MovieDao
 }

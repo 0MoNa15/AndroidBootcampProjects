@@ -2,7 +2,7 @@ package com.example.josebootcampandroid.data.movie.models
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieTopDto (
+data class MovieTopDto(
     val id: Int,
     val title: String,
     @SerializedName("vote_average")

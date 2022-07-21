@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.example.josebootcampandroid.databinding.FragmentSearchBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,38 +21,27 @@ class SearchFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    val searchViewModel : SearchViewModel by viewModels()
-        //ViewModelProvider(this).get(SearchViewModel::class.java)
-
+    val searchViewModel: SearchViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textDashboard
-//        dashboardViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
         searchViewModel.fromApi()
         searchViewModel.searchMovieList.observe(viewLifecycleOwner, Observer {
             binding.rvSearchMovies.adapter = SearchAdapter(it)
         })
-
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //Esta se anulan ya que se llama el metodo get de la linea 36.
-        //val searchMovie = binding.rvSearchMovies
-        //searchMovie.adapter = SearchAdapter(SearchProvider.SearchOfMovie)
-
-        binding.searchEditText.addTextChangedListener(object: TextWatcher {
+        binding.searchEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {

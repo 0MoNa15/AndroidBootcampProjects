@@ -58,11 +58,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dimen_8"
         android:text="@string/Olvidaste_contrasena"
+        app:layout_constraintBottom_toBottomOf="@id/buttonLogin"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintBottom_toBottomOf="@id/buttonLogin"/>
+        app:layout_constraintStart_toStartOf="@+id/guideline1" />
 
     <EditText
         android:id="@+id/etContrasena"

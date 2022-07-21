@@ -12,25 +12,20 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val movieHomeUseCase: MovieHomeUseCase) : ViewModel() {
-    private  val _homeMovie = MutableLiveData<List<MovieTop>>()
+class HomeViewModel @Inject constructor(private val movieHomeUseCase: MovieHomeUseCase) :
+    ViewModel() {
+    private val _homeMovie = MutableLiveData<List<MovieTop>>()
     val homeMovie: LiveData<List<MovieTop>>
-    get() = _homeMovie
+        get() = _homeMovie
 
-    fun fromApi(){
+    fun fromApi() {
         viewModelScope.launch {
-            //val response = ApiRestManager.create().obtainMovieList(ApiRestManager.apiKey)
             try {
                 val response = movieHomeUseCase()
                 _homeMovie.value = response
-            }catch (e:Exception){
-            Log.i("R","Error presentado")
+            } catch (e: Exception) {
+                Log.i("R", "Error presentado")
             }
         }
     }
-
-    /*private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text*/
 }

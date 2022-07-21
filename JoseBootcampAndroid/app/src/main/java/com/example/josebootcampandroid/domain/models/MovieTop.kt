@@ -11,7 +11,7 @@ data class MovieTop(
     val backdropPath: String
 )
 
-fun MovieTopDto.toDomain() = MovieTop (
+fun MovieTopDto.toDomain() = MovieTop(
     id,
     title,
     voteAverage,

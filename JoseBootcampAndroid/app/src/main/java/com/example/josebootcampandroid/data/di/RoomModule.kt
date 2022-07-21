@@ -15,7 +15,8 @@ import javax.inject.Singleton
 object RoomModule {
     @Singleton
     @Provides
-    fun providerRoom(@ApplicationContext context : Context) = Room.databaseBuilder(context,MovieDb::class.java,"MovieDb").build()
+    fun providerRoom(@ApplicationContext context: Context) =
+        Room.databaseBuilder(context, MovieDb::class.java, "MovieDb").build()
 
     @Singleton
     @Provides

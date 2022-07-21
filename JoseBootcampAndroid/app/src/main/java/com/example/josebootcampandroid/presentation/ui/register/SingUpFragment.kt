@@ -17,21 +17,17 @@ import com.example.josebootcampandroid.presentation.ui.home.ProviderType
 import com.example.josebootcampandroid.presentation.ui.login.LogFragment
 import com.google.firebase.auth.FirebaseAuth
 
-
 class fragment_sing_up : Fragment() {
-
     private var _binding: FragmentSingUpBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         // Inflate the layout for this fragment
         _binding = FragmentSingUpBinding.inflate(inflater, container, false)
         return binding.root
@@ -53,28 +49,27 @@ class fragment_sing_up : Fragment() {
                 }
             }
         }
-
     }
 
     private fun showAlert() {
         val builder = AlertDialog.Builder(this.context)//verificar si esto es correcto
         builder.setTitle("Error")
         builder.setMessage("Se ha producido un error registrando el usuario o contraseña")
-        builder.setPositiveButton("Aceptar",null)
+        builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
-    private fun showCorrect(){
+    private fun showCorrect() {
         val builder = AlertDialog.Builder(this.context)
         builder.setTitle("Felicidades")
         builder.setMessage("Usuario y contraseña registrados satisfactoriamente")
-        builder.setPositiveButton("Aceptar",null)
+        builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
-    private fun showLog(){
+    private fun showLog() {
         findNavController().navigate(R.id.navigation_login)
     }
 
@@ -84,8 +79,5 @@ class fragment_sing_up : Fragment() {
             setup()
         }
     }
-
-
-
 }
 
