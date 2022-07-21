@@ -19,9 +19,8 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object ApiRestManager {
-        private const val url: String = "https://api.themoviedb.org/3/"
-        const val apiKey: String = "c5c47722a4adcc77f6e84f28a48b857a"
-
+    private const val url: String = "https://api.themoviedb.org/3/"
+    const val apiKey: String = "c5c47722a4adcc77f6e84f28a48b857a"
 
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)
@@ -47,8 +46,8 @@ object ApiRestManager {
 
     @Provides
     @Singleton
-    fun providerObtainMovie(api:RetrofitMovieDataSource, movieDao:MovieDao) : MovieRepository{
-        return MovieRepositoryImpl(api,movieDao)
+    fun providerObtainMovie(api: RetrofitMovieDataSource, movieDao: MovieDao): MovieRepository {
+        return MovieRepositoryImpl(api, movieDao)
     }
 
 }

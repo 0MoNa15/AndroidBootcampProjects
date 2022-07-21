@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".presentation.ui.dashboard.fragment_sing_up">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:id="@+id/textView8"
         android:layout_width="match_parent"
@@ -20,15 +18,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15"
-        />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85"/>
+        app:layout_constraintGuide_percent="0.85" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -95,14 +92,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:layout_constraintVertical_bias="0.0">
 
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPersonName"
             tools:layout_editor_absoluteX="-16dp"
-            tools:layout_editor_absoluteY="16dp"
-            android:inputType="textPersonName"/>
+            tools:layout_editor_absoluteY="16dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -136,8 +132,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_16"
         android:hint="@string/Contrasena"
-        app:helperText="@string/La_contrasena_debe_contener_8_catacteres"
         app:endIconMode="password_toggle"
+        app:helperText="@string/La_contrasena_debe_contener_8_catacteres"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
@@ -152,8 +148,6 @@
             tools:layout_editor_absoluteX="-16dp"
             tools:layout_editor_absoluteY="16dp" />
 
-
     </com.google.android.material.textfield.TextInputLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

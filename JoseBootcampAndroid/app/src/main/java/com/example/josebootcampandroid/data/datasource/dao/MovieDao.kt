@@ -10,15 +10,15 @@ import com.example.josebootcampandroid.data.datasource.entities.MovieTopEntity
 @Dao
 interface MovieDao {
     @Query("select * from movie_table")
-    suspend fun getMovies() : List<MovieEntity>
+    suspend fun getMovies(): List<MovieEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertMovies(insMovie : List<MovieEntity>)
+    suspend fun insertMovies(insMovie: List<MovieEntity>)
 
     @Query("select * from movie_top_table")
-    suspend fun getMoviesTop() : List<MovieTopEntity>
+    suspend fun getMoviesTop(): List<MovieTopEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertMoviesTop(insMovieTop : List<MovieTopEntity>)
+    suspend fun insertMoviesTop(insMovieTop: List<MovieTopEntity>)
 }
 

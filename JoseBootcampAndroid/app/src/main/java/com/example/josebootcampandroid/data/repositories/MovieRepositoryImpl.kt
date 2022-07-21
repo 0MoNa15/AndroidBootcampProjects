@@ -14,21 +14,24 @@ import com.example.josebootcampandroid.domain.models.toDomain
 import com.example.josebootcampandroid.domain.repositories.MovieRepository
 import javax.inject.Inject
 
-class MovieRepositoryImpl @Inject constructor (private val api : RetrofitMovieDataSource, private val movieDao: MovieDao) :
+class MovieRepositoryImpl @Inject constructor(
+    private val api: RetrofitMovieDataSource,
+    private val movieDao: MovieDao
+) :
     MovieRepository {
     override suspend fun getAllMoviesFromApi(listId: Int?): List<Movie> {
-        val result: MovieListResponse = api.obtainMovie(1,ApiRestManager.apiKey)
+        val result: MovieListResponse = api.obtainMovie(1, ApiRestManager.apiKey)
         return result.moviesList.map { it.toDomain() }
     }
 
     override suspend fun getAllMoviesFromRoom(listId: Int?): List<Movie> {
         val result: List<MovieEntity> = movieDao.getMovies()
-        return result.map { it.toDomain()}
+        return result.map { it.toDomain() }
     }
 
     override suspend fun getAllMoviesTopFromApi(listId: Int?): List<MovieTop> {
         val result: ListMovieResponse = api.obtainMovieList(ApiRestManager.apiKey)
-        return  result.homeMovieTop.map { it.toDomain() }
+        return result.homeMovieTop.map { it.toDomain() }
     }
 
     override suspend fun getAllMoviesTopFromRoom(listId: Int?): List<MovieTop> {

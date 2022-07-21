@@ -2,7 +2,6 @@ package com.example.josebootcampandroid.data.movie.models
 
 import com.google.gson.annotations.SerializedName
 
-
 data class MovieDto(
     val title: String,
     val id: Int,

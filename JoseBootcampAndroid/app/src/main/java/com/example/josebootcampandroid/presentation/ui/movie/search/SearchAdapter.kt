@@ -12,21 +12,23 @@ import com.example.josebootcampandroid.domain.models.Movie
 import com.example.josebootcampandroid.domain.models.MovieTop
 import com.squareup.picasso.Picasso
 
-class SearchAdapter(val SearchMovie: List<Movie>) : RecyclerView.Adapter<SearchAdapter.SearchMovieViewHolders>() {
-    inner class SearchMovieViewHolders(val view: View): RecyclerView.ViewHolder(view){
+class SearchAdapter(val SearchMovie: List<Movie>) :
+    RecyclerView.Adapter<SearchAdapter.SearchMovieViewHolders>() {
+    inner class SearchMovieViewHolders(val view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemMovieBinding.bind(view)
         fun render(item: Movie) {
             binding.tvMovieTitle.text = item.title
             binding.tvYear.text = item.date
             /*binding.tvStar.text = item.nameCastOfSearch*/
-            Picasso.get().load("https://image.tmdb.org/t/p/w500${item.backgroundImage}").into(binding.ivMovie)
-            view.setOnClickListener { view.findNavController().navigate(R.id.navigation_detail)}
+            Picasso.get().load("https://image.tmdb.org/t/p/w500${item.backgroundImage}")
+                .into(binding.ivMovie)
+            view.setOnClickListener { view.findNavController().navigate(R.id.navigation_detail) }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchMovieViewHolders {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return SearchMovieViewHolders(layoutInflater.inflate(R.layout.item_movie,parent,false))
+        return SearchMovieViewHolders(layoutInflater.inflate(R.layout.item_movie, parent, false))
     }
 
     override fun onBindViewHolder(holder: SearchMovieViewHolders, position: Int) {

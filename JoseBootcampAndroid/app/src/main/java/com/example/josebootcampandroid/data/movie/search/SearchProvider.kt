@@ -12,7 +12,6 @@ class SearchProvider {
             SearchModel("La era de la extinción","2014","Mark Wahlberg - John Goodman - Ken Watanabe",R.drawable.transformer4_movie),
             SearchModel("El último caballero","2017","Mark Wahlberg - Akiva Goldsman",R.drawable.transformer5_movie),
             SearchModel("Bumblebee","2018","Hailee Steinfeld - John Cena - Jorge Lendeborg Jr",R.drawable.transformer6_movie)
-
         )
     }*/
 }

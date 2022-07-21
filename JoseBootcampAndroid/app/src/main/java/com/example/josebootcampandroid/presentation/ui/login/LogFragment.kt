@@ -12,9 +12,7 @@ import com.example.josebootcampandroid.databinding.FragmentLogBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
-
 class LogFragment : Fragment() {
-
 
     private var _binding: FragmentLogBinding? = null
 
@@ -25,7 +23,6 @@ class LogFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-
         }
     }
 
@@ -36,34 +33,41 @@ class LogFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentLogBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     private fun login() {
-            if (!binding.etUsuario.text.isNullOrEmpty() && !binding.etContrasena.text.isNullOrEmpty()) {
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                    binding.etUsuario.text.toString(),
-                    binding.etContrasena.text.toString()
-                ).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        showSuccessful()
-                        showHome()
-                    } else {
-                        showAlert()
-                    }
+        if (!binding.etUsuario.text.isNullOrEmpty() && !binding.etContrasena.text.isNullOrEmpty()) {
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(
+                binding.etUsuario.text.toString(),
+                binding.etContrasena.text.toString()
+            ).addOnCompleteListener {
+                if (it.isSuccessful) {
+                    showSuccessful()
+                    showHome()
+                } else {
+                    showAlert()
                 }
             }
+        }
     }
 
     //Se utiliza para crear enlaces de acuerdo a los textos que tengamos en el login principal.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtContinuarComoInvitado.setOnClickListener{findNavController().navigate(R.id.navigation_home,null)}
-        binding.buttonLogin.setOnClickListener{login()}
-        binding.txtRegistrate.setOnClickListener{findNavController().navigate(R.id.navigation_registration,null) }
+        binding.txtContinuarComoInvitado.setOnClickListener {
+            findNavController().navigate(
+                R.id.navigation_home,
+                null
+            )
+        }
+        binding.buttonLogin.setOnClickListener { login() }
+        binding.txtRegistrate.setOnClickListener {
+            findNavController().navigate(
+                R.id.navigation_registration,
+                null
+            )
+        }
     }
-
-
 
     override fun onResume() {
         super.onResume()
@@ -79,7 +83,7 @@ class LogFragment : Fragment() {
         val builder = AlertDialog.Builder(this.context)//verificar si esto es correcto
         builder.setTitle("Error")
         builder.setMessage("Se ha producido un error autenticando al usuario")
-        builder.setPositiveButton("Aceptar",null)
+        builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -88,14 +92,12 @@ class LogFragment : Fragment() {
         val builder = AlertDialog.Builder(this.context)
         builder.setTitle("Bienvenido")
         builder.setMessage("Ingreso Exitoso")
-        builder.setPositiveButton("Aceptar",null)
+        builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
-    private fun showHome(){
+    private fun showHome() {
         findNavController().navigate(R.id.navigation_home)
     }
-
-
 }
