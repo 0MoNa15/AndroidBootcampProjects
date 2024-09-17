@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tv_userdata">18sp</dimen>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="ev_height">50dp</dimen>
+    <dimen name="bt_text">18sp</dimen>
+    <dimen name="ev_padding_left">10dp</dimen>
+    <dimen name="civ_width">65dp</dimen>
+    <dimen name="civ_height">69dp</dimen>
+    <dimen name="civ_border_size">2dp</dimen>
+    <dimen name="civ_margin_bottom">116dp</dimen>
+    <dimen name="et_corner_radius">16dp</dimen>
+    <dimen name="bt_corner_radius">16dp</dimen>
+    <dimen name="tv_login_text_size">20sp</dimen>
+    <dimen name="margin_bottom_8">8dp</dimen>
+    <dimen name="margin_bottom_10">10dp</dimen>
+    <dimen name="margin_bottom_16">16dp</dimen>
+    <dimen name="margin_bottom_24">24dp</dimen>
+    <dimen name="margin_bottom_32">32dp</dimen>
+    <dimen name="margin_bottom_40">40dp</dimen>
+    <dimen name="margin_bottom_48">48dp</dimen>
+    <dimen name="margin_bottom_80">80dp</dimen>
+    <dimen name="margin_bottom_120">120dp</dimen>
+    <dimen name="margin_bottom_144">144dp</dimen>
+
+
+    <!-- Constraint percentages -->
+
+    <dimen name="zero_pct">0</dimen>
+    <dimen name="five_pct">0.05</dimen>
+    <dimen name="ten_pct">0.1</dimen>
+    <dimen name="fifteen_pct">0.15</dimen>
+    <dimen name="twenty_pct">0.2</dimen>
+    <dimen name="twenty_five_pct">0.25</dimen>
+    <dimen name="thirty_pct">0.3</dimen>
+    <dimen name="thirty_five_pct">0.35</dimen>
+    <dimen name="forty_pct">0.4</dimen>
+    <dimen name="forty_five_pct">0.45</dimen>
+    <dimen name="fifty_pct">0.5</dimen>
+    <dimen name="fifty_five_pct">0.55</dimen>
+    <dimen name="sixty_pct">0.6</dimen>
+    <dimen name="sixty_five_pct">0.65</dimen>
+    <dimen name="seventy_pct">0.7</dimen>
+    <dimen name="seventy_five_pct">0.75</dimen>
+    <dimen name="eighty_pct">0.8</dimen>
+    <dimen name="eight_five_pct">0.85</dimen>
+    <dimen name="ninety_pct">0.9</dimen>
+    <dimen name="ninety_five_pct">0.95</dimen>
+    <dimen name="hundert_pct">1</dimen>
+
+</resources>
